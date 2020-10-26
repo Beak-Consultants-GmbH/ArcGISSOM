@@ -1,0 +1,161 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CreateSOMResultRaster
+</name>
+</assembly>
+<members>
+<member name="T:CreateSOMResultRaster.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CreateSOMResultRaster.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CreateSOMResultRaster.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:CreateSOMResultRaster.LicenseInitializer">
+ <summary>
+ Initialize ArcObjects runtime environment for this application
+ </summary>
+</member>
+<member name="E:CreateSOMResultRaster.LicenseInitializer.ResolveBindingEvent">
+ <summary>
+ Raised when ArcGIS runtime binding hasn't been established. 
+ </summary>
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.InitializeApplication(ESRI.ArcGIS.esriSystem.esriLicenseProductCode[],ESRI.ArcGIS.esriSystem.esriLicenseExtensionCode[])">
+ <summary>
+ Initialize the application with the specified product and extension license code.
+ </summary>
+ <returns>Initialization is successful.</returns>
+ <remarks>
+ Make sure an active ArcGIS runtime has been bound before license initialization.
+</remarks>
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.LicenseMessage">
+ <summary>
+ A summary of the status of product and extensions initialization.
+ </summary>
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.ShutdownApplication">
+ <summary>
+ Shuts down AoInitialize object and check back in extensions to ensure
+ any ESRI libraries that have been used are unloaded in the correct order.
+ </summary>
+ <remarks>Once Shutdown has been called, you cannot re-initialize the product license
+ and should not make any ArcObjects call.</remarks>
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.IsExtensionCheckedOut(ESRI.ArcGIS.esriSystem.esriLicenseExtensionCode)">
+ <summary>
+ Indicates if the extension is currently checked out.
+ </summary>    
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.AddExtensions(ESRI.ArcGIS.esriSystem.esriLicenseExtensionCode[])">
+ <summary>
+ Set the extension(s) to be checked out for your ArcObjects code. 
+ </summary>
+</member>
+<member name="M:CreateSOMResultRaster.LicenseInitializer.RemoveExtensions(ESRI.ArcGIS.esriSystem.esriLicenseExtensionCode[])">
+ <summary>
+ Check in extension(s) when no longer needed.
+ </summary>
+</member>
+<member name="P:CreateSOMResultRaster.LicenseInitializer.InitializeLowerProductFirst">
+ <summary>
+ Get/Set the ordering of product code checking. If true, check from lowest to 
+ highest license. True by default.
+ </summary>
+</member>
+<member name="P:CreateSOMResultRaster.LicenseInitializer.InitializedProduct">
+ <summary>
+ Retrieves the product code initialized in the ArcObjects application
+ </summary>
+</member>
+<member name="M:CreateSOMResultRaster.RasterReader.#ctor(System.String,System.Int32,CreateSOMResultRaster.RasterReader.BlockSizeType)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vRasterFullpath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vBlockSizeType">Type of pixel block (Default: use default size (1024 x 1024). OneRowAllPixels: height = 1, width = image width).</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterReader.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vRasterFullpath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vPixelBlockSizeX">Width of pixel block.</param>
+ <param name="vPixelBlockSizeY">Height of pixel block.</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterReaderMultipleWithMask.#ctor(System.String,System.Int32,CreateSOMResultRaster.RasterReader.BlockSizeType)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vMaskFullpath">Path to input mask raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vBlockSizeType">Type of pixel block (Default: use default size (1024 x 1024). OneRowAllPixels: height = 1, width = image width).</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterReaderMultipleWithMask.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vMaskFullpath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vPixelBlockSizeX">Width of pixel block.</param>
+ <param name="vPixelBlockSizeY">Height of pixel block.</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterReadOnMask.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vMaskFullpath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vPixelBlockSizeX">Width of pixel block.</param>
+ <param name="vPixelBlockSizeY">Height of pixel block.</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterWriter.#ctor(System.String,System.Int32,CreateSOMResultRaster.RasterReader.BlockSizeType)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vRasterFullFilepath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vBlockSizeType">Type of pixel block (Default: use default size (1024 x 1024). OneRowAllPixels: height = 1, width = image width).</param>
+</member>
+<member name="M:CreateSOMResultRaster.RasterWriter.#ctor(System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Class to read a rasterfile using a pixelblock.
+ </summary>
+ <param name="vRasterFullpath">Path to input raster.</param>
+ <param name="vBandNumber">Band number to be read.</param>
+ <param name="vPixelBlockSizeX">Width of pixel block.</param>
+ <param name="vPixelBlockSizeY">Height of pixel block.</param>
+</member>
+<member name="F:CreateSOMResultRaster.SOMResultFileReader.mFullFileName">
+ <summary>
+ Pfad der Ausgabedatei.
+ </summary>
+</member>
+<member name="F:CreateSOMResultRaster.SOMResultFileReader.mStreamReader">
+ <summary>
+ BinaryWriter.
+ </summary>
+</member>
+<member name="M:CreateSOMResultRaster.Workspace.CheckWorkspaceName(System.String)">
+ <summary> 
+ Testet, ob der angegebene Name für einen Workspace verwendet werden kann. 
+ </summary> 
+ <param name="vWorkspaceName">Name, der getestet werden soll.</param> 
+ <returns>Fehler-Enumeration.</returns> 
+</member>
+</members>
+</doc>
